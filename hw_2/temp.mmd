@@ -1,9 +1,572 @@
 graph LR
+    ca_certificates["ca-certificates"]
+    style ca_certificates fill:#ffeeeeeeeeee
+    gcc_12_base["gcc-12-base"]
+    style gcc_12_base fill:#ffffffeeeeee
+    gyp["gyp"]
+    style gyp fill:#fffeeeeeeeee
+    libbrotli1["libbrotli1"]
+    style libbrotli1 fill:#fffffeeeeeee
+    libc_ares2["libc-ares2"]
+    style libc_ares2 fill:#fffffeeeeeee
+    libc6["libc6"]
+    style libc6 fill:#ffffeeeeeeee
+    libcrypt1["libcrypt1"]
+    style libcrypt1 fill:#fffffeeeeeee
+    libgcc_s1["libgcc-s1"]
+    style libgcc_s1 fill:#fffffeeeeeee
+    libicu70["libicu70"]
+    style libicu70 fill:#fffffeeeeeee
+    libjs_events["libjs-events"]
+    style libjs_events fill:#ffffeeeeeeee
+    libjs_inherits["libjs-inherits"]
+    style libjs_inherits fill:#ffffeeeeeeee
+    libjs_is_typedarray["libjs-is-typedarray"]
+    style libjs_is_typedarray fill:#ffffeeeeeeee
+    libjs_typedarray_to_buffer["libjs-typedarray-to-buffer"]
+    style libjs_typedarray_to_buffer fill:#ffffeeeeeeee
+    libnghttp2_14["libnghttp2-14"]
+    style libnghttp2_14 fill:#fffffeeeeeee
+    libnode_dev["libnode-dev"]
+    style libnode_dev fill:#fffeeeeeeeee
+    libnode72["libnode72"]
+    style libnode72 fill:#ffffeeeeeeee
+    libssl_dev["libssl-dev"]
+    style libssl_dev fill:#ffffeeeeeeee
+    libssl3["libssl3"]
+    style libssl3 fill:#ffffeeeeeeee
+    libuv1["libuv1"]
+    style libuv1 fill:#fffffeeeeeee
+    libuv1_dev["libuv1-dev"]
+    style libuv1_dev fill:#ffffeeeeeeee
+    node_abbrev["node-abbrev"]
+    style node_abbrev fill:#ffeeeeeeeeee
+    node_agent_base["node-agent-base"]
+    style node_agent_base fill:#ffeeeeeeeeee
+    node_ansi_regex["node-ansi-regex"]
+    style node_ansi_regex fill:#fffeeeeeeeee
+    node_ansi_styles["node-ansi-styles"]
+    style node_ansi_styles fill:#fffeeeeeeeee
+    node_ansistyles["node-ansistyles"]
+    style node_ansistyles fill:#ffeeeeeeeeee
+    node_aproba["node-aproba"]
+    style node_aproba fill:#ffeeeeeeeeee
+    node_archy["node-archy"]
+    style node_archy fill:#ffeeeeeeeeee
+    node_are_we_there_yet["node-are-we-there-yet"]
+    style node_are_we_there_yet fill:#fffeeeeeeeee
+    node_asap["node-asap"]
+    style node_asap fill:#ffeeeeeeeeee
+    node_balanced_match["node-balanced-match"]
+    style node_balanced_match fill:#ffffeeeeeeee
+    node_brace_expansion["node-brace-expansion"]
+    style node_brace_expansion fill:#fffeeeeeeeee
+    node_builtins["node-builtins"]
+    style node_builtins fill:#fffeeeeeeeee
+    node_cacache["node-cacache"]
+    style node_cacache fill:#ffeeeeeeeeee
+    node_chalk["node-chalk"]
+    style node_chalk fill:#ffeeeeeeeeee
+    node_chownr["node-chownr"]
+    style node_chownr fill:#ffeeeeeeeeee
+    node_cli_table3["node-cli-table3"]
+    style node_cli_table3 fill:#ffeeeeeeeeee
+    node_color_convert["node-color-convert"]
+    style node_color_convert fill:#ffffeeeeeeee
+    node_color_name["node-color-name"]
+    style node_color_name fill:#fffffeeeeeee
+    node_color_support["node-color-support"]
+    style node_color_support fill:#ffffeeeeeeee
+    node_colors["node-colors"]
+    style node_colors fill:#ffeeeeeeeeee
+    node_columnify["node-columnify"]
+    style node_columnify fill:#ffeeeeeeeeee
+    node_console_control_strings["node-console-control-strings"]
+    style node_console_control_strings fill:#fffeeeeeeeee
+    node_copy_concurrently["node-copy-concurrently"]
+    style node_copy_concurrently fill:#ffffeeeeeeee
+    node_core_util_is["node-core-util-is"]
+    style node_core_util_is fill:#fffffeeeeeee
+    node_debug["node-debug"]
+    style node_debug fill:#ffeeeeeeeeee
+    node_decompress_response["node-decompress-response"]
+    style node_decompress_response fill:#fffeeeeeeeee
+    node_defaults["node-defaults"]
+    style node_defaults fill:#ffffeeeeeeee
+    node_delegates["node-delegates"]
+    style node_delegates fill:#ffffeeeeeeee
+    node_depd["node-depd"]
+    style node_depd fill:#ffeeeeeeeeee
+    node_emoji_regex["node-emoji-regex"]
+    style node_emoji_regex fill:#ffeeeeeeeeee
+    node_encoding["node-encoding"]
+    style node_encoding fill:#ffeeeeeeeeee
+    node_end_of_stream["node-end-of-stream"]
+    style node_end_of_stream fill:#fffffeeeeeee
+    node_err_code["node-err-code"]
+    style node_err_code fill:#fffeeeeeeeee
+    node_escape_string_regexp["node-escape-string-regexp"]
+    style node_escape_string_regexp fill:#fffeeeeeeeee
+    node_events["node-events"]
+    style node_events fill:#fffeeeeeeeee
+    node_fs_write_stream_atomic["node-fs-write-stream-atomic"]
+    style node_fs_write_stream_atomic fill:#ffffeeeeeeee
+    node_fs_realpath["node-fs.realpath"]
+    style node_fs_realpath fill:#fffeeeeeeeee
+    node_gauge["node-gauge"]
+    style node_gauge fill:#fffeeeeeeeee
+    node_get_stream["node-get-stream"]
+    style node_get_stream fill:#fffeeeeeeeee
+    node_glob["node-glob"]
+    style node_glob fill:#ffeeeeeeeeee
+    node_got["node-got"]
+    style node_got fill:#ffeeeeeeeeee
+    node_graceful_fs["node-graceful-fs"]
+    style node_graceful_fs fill:#ffeeeeeeeeee
+    node_gyp["node-gyp"]
+    style node_gyp fill:#ffeeeeeeeeee
+    node_has["node-has"]
+    style node_has fill:#ffffeeeeeeee
+    node_has_flag["node-has-flag"]
+    style node_has_flag fill:#ffffeeeeeeee
+    node_has_unicode["node-has-unicode"]
+    style node_has_unicode fill:#ffffeeeeeeee
+    node_hosted_git_info["node-hosted-git-info"]
+    style node_hosted_git_info fill:#ffeeeeeeeeee
+    node_https_proxy_agent["node-https-proxy-agent"]
+    style node_https_proxy_agent fill:#ffeeeeeeeeee
+    node_iconv_lite["node-iconv-lite"]
+    style node_iconv_lite fill:#fffeeeeeeeee
+    node_iferr["node-iferr"]
+    style node_iferr fill:#fffffeeeeeee
+    node_imurmurhash["node-imurmurhash"]
+    style node_imurmurhash fill:#fffeeeeeeeee
+    node_indent_string["node-indent-string"]
+    style node_indent_string fill:#ffffeeeeeeee
+    node_inflight["node-inflight"]
+    style node_inflight fill:#fffeeeeeeeee
+    node_inherits["node-inherits"]
+    style node_inherits fill:#fffeeeeeeeee
+    node_ini["node-ini"]
+    style node_ini fill:#ffeeeeeeeeee
+    node_ip["node-ip"]
+    style node_ip fill:#ffeeeeeeeeee
+    node_ip_regex["node-ip-regex"]
+    style node_ip_regex fill:#ffeeeeeeeeee
+    node_is_fullwidth_code_point["node-is-fullwidth-code-point"]
+    style node_is_fullwidth_code_point fill:#fffeeeeeeeee
+    node_is_typedarray["node-is-typedarray"]
+    style node_is_typedarray fill:#fffeeeeeeeee
+    node_isarray["node-isarray"]
+    style node_isarray fill:#fffffeeeeeee
+    node_isexe["node-isexe"]
+    style node_isexe fill:#fffeeeeeeeee
+    node_json_buffer["node-json-buffer"]
+    style node_json_buffer fill:#fffeeeeeeeee
+    node_json_parse_better_errors["node-json-parse-better-errors"]
+    style node_json_parse_better_errors fill:#ffeeeeeeeeee
+    node_jsonparse["node-jsonparse"]
+    style node_jsonparse fill:#ffeeeeeeeeee
+    node_lowercase_keys["node-lowercase-keys"]
+    style node_lowercase_keys fill:#fffeeeeeeeee
+    node_lru_cache["node-lru-cache"]
+    style node_lru_cache fill:#ffeeeeeeeeee
+    node_mimic_response["node-mimic-response"]
+    style node_mimic_response fill:#fffeeeeeeeee
+    node_minimatch["node-minimatch"]
+    style node_minimatch fill:#ffeeeeeeeeee
+    node_minipass["node-minipass"]
+    style node_minipass fill:#ffeeeeeeeeee
+    node_mkdirp["node-mkdirp"]
+    style node_mkdirp fill:#ffeeeeeeeeee
+    node_move_concurrently["node-move-concurrently"]
+    style node_move_concurrently fill:#fffeeeeeeeee
+    node_ms["node-ms"]
+    style node_ms fill:#ffeeeeeeeeee
+    node_mute_stream["node-mute-stream"]
+    style node_mute_stream fill:#fffeeeeeeeee
+    node_negotiator["node-negotiator"]
+    style node_negotiator fill:#ffeeeeeeeeee
+    node_nopt["node-nopt"]
+    style node_nopt fill:#ffeeeeeeeeee
+    node_normalize_package_data["node-normalize-package-data"]
+    style node_normalize_package_data fill:#ffeeeeeeeeee
+    node_npm_bundled["node-npm-bundled"]
+    style node_npm_bundled fill:#ffeeeeeeeeee
+    node_npm_package_arg["node-npm-package-arg"]
+    style node_npm_package_arg fill:#ffeeeeeeeeee
+    node_npmlog["node-npmlog"]
+    style node_npmlog fill:#ffeeeeeeeeee
+    node_once["node-once"]
+    style node_once fill:#ffeeeeeeeeee
+    node_osenv["node-osenv"]
+    style node_osenv fill:#fffeeeeeeeee
+    node_p_cancelable["node-p-cancelable"]
+    style node_p_cancelable fill:#fffeeeeeeeee
+    node_p_map["node-p-map"]
+    style node_p_map fill:#fffeeeeeeeee
+    node_path_is_absolute["node-path-is-absolute"]
+    style node_path_is_absolute fill:#fffeeeeeeeee
+    node_process_nextick_args["node-process-nextick-args"]
+    style node_process_nextick_args fill:#fffffeeeeeee
+    node_promise_inflight["node-promise-inflight"]
+    style node_promise_inflight fill:#fffeeeeeeeee
+    node_promise_retry["node-promise-retry"]
+    style node_promise_retry fill:#ffeeeeeeeeee
+    node_promzard["node-promzard"]
+    style node_promzard fill:#ffeeeeeeeeee
+    node_pump["node-pump"]
+    style node_pump fill:#ffffeeeeeeee
+    node_quick_lru["node-quick-lru"]
+    style node_quick_lru fill:#fffeeeeeeeee
+    node_read["node-read"]
+    style node_read fill:#ffeeeeeeeeee
+    node_read_package_json["node-read-package-json"]
+    style node_read_package_json fill:#ffeeeeeeeeee
+    node_readable_stream["node-readable-stream"]
+    style node_readable_stream fill:#ffffeeeeeeee
+    node_resolve["node-resolve"]
+    style node_resolve fill:#fffeeeeeeeee
+    node_retry["node-retry"]
+    style node_retry fill:#fffeeeeeeeee
+    node_rimraf["node-rimraf"]
+    style node_rimraf fill:#ffeeeeeeeeee
+    node_run_queue["node-run-queue"]
+    style node_run_queue fill:#ffffeeeeeeee
+    node_safe_buffer["node-safe-buffer"]
+    style node_safe_buffer fill:#fffeeeeeeeee
+    node_semver["node-semver"]
+    style node_semver fill:#ffeeeeeeeeee
+    node_set_blocking["node-set-blocking"]
+    style node_set_blocking fill:#fffeeeeeeeee
+    node_signal_exit["node-signal-exit"]
+    style node_signal_exit fill:#fffeeeeeeeee
+    node_slash["node-slash"]
+    style node_slash fill:#fffeeeeeeeee
+    node_slice_ansi["node-slice-ansi"]
+    style node_slice_ansi fill:#fffeeeeeeeee
+    node_spdx_correct["node-spdx-correct"]
+    style node_spdx_correct fill:#fffeeeeeeeee
+    node_spdx_exceptions["node-spdx-exceptions"]
+    style node_spdx_exceptions fill:#ffffeeeeeeee
+    node_spdx_expression_parse["node-spdx-expression-parse"]
+    style node_spdx_expression_parse fill:#fffeeeeeeeee
+    node_spdx_license_ids["node-spdx-license-ids"]
+    style node_spdx_license_ids fill:#ffffeeeeeeee
+    node_ssri["node-ssri"]
+    style node_ssri fill:#ffeeeeeeeeee
+    node_string_decoder["node-string-decoder"]
+    style node_string_decoder fill:#fffffeeeeeee
+    node_string_width["node-string-width"]
+    style node_string_width fill:#ffeeeeeeeeee
+    node_strip_ansi["node-strip-ansi"]
+    style node_strip_ansi fill:#ffeeeeeeeeee
+    node_supports_color["node-supports-color"]
+    style node_supports_color fill:#fffeeeeeeeee
+    node_tar["node-tar"]
+    style node_tar fill:#ffeeeeeeeeee
+    node_text_table["node-text-table"]
+    style node_text_table fill:#ffeeeeeeeeee
+    node_typedarray_to_buffer["node-typedarray-to-buffer"]
+    style node_typedarray_to_buffer fill:#fffeeeeeeeee
+    node_unique_filename["node-unique-filename"]
+    style node_unique_filename fill:#fffeeeeeeeee
+    node_util_deprecate["node-util-deprecate"]
+    style node_util_deprecate fill:#fffffeeeeeee
+    node_validate_npm_package_license["node-validate-npm-package-license"]
+    style node_validate_npm_package_license fill:#ffeeeeeeeeee
+    node_validate_npm_package_name["node-validate-npm-package-name"]
+    style node_validate_npm_package_name fill:#ffeeeeeeeeee
+    node_wcwidth_js["node-wcwidth.js"]
+    style node_wcwidth_js fill:#fffeeeeeeeee
+    node_whatwg_fetch["node-whatwg-fetch"]
+    style node_whatwg_fetch fill:#fffeeeeeeeee
+    node_which["node-which"]
+    style node_which fill:#ffeeeeeeeeee
+    node_wide_align["node-wide-align"]
+    style node_wide_align fill:#ffffeeeeeeee
+    node_wrappy["node-wrappy"]
+    style node_wrappy fill:#ffeeeeeeeeee
+    node_write_file_atomic["node-write-file-atomic"]
+    style node_write_file_atomic fill:#ffeeeeeeeeee
+    node_yallist["node-yallist"]
+    style node_yallist fill:#ffeeeeeeeeee
+    nodejs["nodejs"]
+    style nodejs fill:#fffeeeeeeeee
     npm["npm"]
-
-    %% Depth levels
-    style npm fill:#eeeeeeeeeee
-
-    %% Legend
-    depth0["Depth 0"]
-    style depth0 fill:#eeeeeeeeeee
+    style npm fill:#feeeeeeeeeee
+    openssl["openssl"]
+    style openssl fill:#fffeeeeeeeee
+    python3_pkg_resources["python3-pkg-resources"]
+    style python3_pkg_resources fill:#ffffeeeeeeee
+    zlib1g["zlib1g"]
+    style zlib1g fill:#fffffeeeeeee
+    ca_certificates --> openssl
+    gyp --> python3_pkg_resources
+    libbrotli1 --> libc6
+    libc_ares2 --> libc6
+    libc6 --> libcrypt1
+    libc6 --> libgcc_s1
+    libgcc_s1 --> gcc_12_base
+    libgcc_s1 --> libc6
+    libicu70 --> libc6
+    libicu70 --> libgcc_s1
+    libnghttp2_14 --> libc6
+    libnode_dev --> libnode72
+    libnode_dev --> libssl_dev
+    libnode_dev --> libuv1_dev
+    libnode72 --> libbrotli1
+    libnode72 --> libc_ares2
+    libnode72 --> libc6
+    libnode72 --> libgcc_s1
+    libnode72 --> libicu70
+    libnode72 --> libnghttp2_14
+    libnode72 --> libuv1
+    libnode72 --> zlib1g
+    libssl_dev --> libssl3
+    libssl3 --> libc6
+    libuv1 --> libc6
+    libuv1_dev --> libuv1
+    node_agent_base --> node_debug
+    node_agent_base --> node_semver
+    node_ansi_styles --> node_color_convert
+    node_aproba --> nodejs
+    node_archy --> nodejs
+    node_are_we_there_yet --> node_delegates
+    node_are_we_there_yet --> node_readable_stream
+    node_brace_expansion --> node_balanced_match
+    node_builtins --> node_semver
+    node_cacache --> node_chownr
+    node_cacache --> node_glob
+    node_cacache --> node_graceful_fs
+    node_cacache --> node_lru_cache
+    node_cacache --> node_mkdirp
+    node_cacache --> node_move_concurrently
+    node_cacache --> node_p_map
+    node_cacache --> node_promise_inflight
+    node_cacache --> node_rimraf
+    node_cacache --> node_ssri
+    node_cacache --> node_unique_filename
+    node_cacache --> nodejs
+    node_chalk --> node_ansi_styles
+    node_chalk --> node_escape_string_regexp
+    node_chalk --> node_supports_color
+    node_chalk --> nodejs
+    node_color_convert --> node_color_name
+    node_colors --> nodejs
+    node_columnify --> node_strip_ansi
+    node_columnify --> node_wcwidth_js
+    node_console_control_strings --> nodejs
+    node_copy_concurrently --> node_aproba
+    node_copy_concurrently --> node_fs_write_stream_atomic
+    node_copy_concurrently --> node_iferr
+    node_copy_concurrently --> node_mkdirp
+    node_copy_concurrently --> node_rimraf
+    node_copy_concurrently --> node_run_queue
+    node_debug --> node_ms
+    node_debug --> nodejs
+    node_decompress_response --> node_mimic_response
+    node_encoding --> node_iconv_lite
+    node_end_of_stream --> node_once
+    node_events --> libjs_events
+    node_events --> nodejs
+    node_fs_write_stream_atomic --> node_graceful_fs
+    node_fs_write_stream_atomic --> node_iferr
+    node_fs_write_stream_atomic --> node_imurmurhash
+    node_gauge --> node_ansi_regex
+    node_gauge --> node_aproba
+    node_gauge --> node_color_support
+    node_gauge --> node_console_control_strings
+    node_gauge --> node_has_unicode
+    node_gauge --> node_signal_exit
+    node_gauge --> node_string_width
+    node_gauge --> node_strip_ansi
+    node_gauge --> node_wide_align
+    node_get_stream --> node_pump
+    node_glob --> node_fs_realpath
+    node_glob --> node_inflight
+    node_glob --> node_inherits
+    node_glob --> node_minimatch
+    node_glob --> node_once
+    node_glob --> node_path_is_absolute
+    node_got --> node_decompress_response
+    node_got --> node_get_stream
+    node_got --> node_json_buffer
+    node_got --> node_lowercase_keys
+    node_got --> node_mimic_response
+    node_got --> node_p_cancelable
+    node_got --> node_quick_lru
+    node_graceful_fs --> nodejs
+    node_gyp --> gyp
+    node_gyp --> libnode_dev
+    node_gyp --> node_glob
+    node_gyp --> node_graceful_fs
+    node_gyp --> node_mkdirp
+    node_gyp --> node_nopt
+    node_gyp --> node_npmlog
+    node_gyp --> node_osenv
+    node_gyp --> node_rimraf
+    node_gyp --> node_semver
+    node_gyp --> node_tar
+    node_gyp --> node_whatwg_fetch
+    node_gyp --> node_which
+    node_hosted_git_info --> node_lru_cache
+    node_https_proxy_agent --> node_agent_base
+    node_https_proxy_agent --> node_debug
+    node_https_proxy_agent --> node_events
+    node_iconv_lite --> node_safe_buffer
+    node_inflight --> node_once
+    node_inflight --> node_wrappy
+    node_inherits --> libjs_inherits
+    node_is_typedarray --> libjs_is_typedarray
+    node_json_buffer --> nodejs
+    node_lru_cache --> node_yallist
+    node_minimatch --> node_brace_expansion
+    node_minipass --> node_encoding
+    node_minipass --> node_jsonparse
+    node_minipass --> node_yallist
+    node_move_concurrently --> node_aproba
+    node_move_concurrently --> node_copy_concurrently
+    node_move_concurrently --> node_fs_write_stream_atomic
+    node_move_concurrently --> node_mkdirp
+    node_move_concurrently --> node_rimraf
+    node_move_concurrently --> node_run_queue
+    node_ms --> nodejs
+    node_nopt --> node_abbrev
+    node_normalize_package_data --> node_hosted_git_info
+    node_normalize_package_data --> node_resolve
+    node_normalize_package_data --> node_semver
+    node_normalize_package_data --> node_validate_npm_package_license
+    node_normalize_package_data --> nodejs
+    node_npm_package_arg --> node_hosted_git_info
+    node_npm_package_arg --> node_osenv
+    node_npm_package_arg --> node_semver
+    node_npm_package_arg --> node_validate_npm_package_name
+    node_npmlog --> node_are_we_there_yet
+    node_npmlog --> node_console_control_strings
+    node_npmlog --> node_gauge
+    node_npmlog --> node_set_blocking
+    node_once --> node_wrappy
+    node_p_map --> node_escape_string_regexp
+    node_p_map --> node_indent_string
+    node_promise_retry --> node_err_code
+    node_promise_retry --> node_retry
+    node_promzard --> node_read
+    node_pump --> node_end_of_stream
+    node_pump --> node_once
+    node_read --> node_mute_stream
+    node_read_package_json --> node_glob
+    node_read_package_json --> node_json_parse_better_errors
+    node_read_package_json --> node_normalize_package_data
+    node_read_package_json --> node_slash
+    node_read_package_json --> nodejs
+    node_readable_stream --> node_core_util_is
+    node_readable_stream --> node_inherits
+    node_readable_stream --> node_isarray
+    node_readable_stream --> node_process_nextick_args
+    node_readable_stream --> node_safe_buffer
+    node_readable_stream --> node_string_decoder
+    node_readable_stream --> node_util_deprecate
+    node_resolve --> node_has
+    node_rimraf --> node_glob
+    node_rimraf --> nodejs
+    node_run_queue --> node_aproba
+    node_semver --> node_lru_cache
+    node_semver --> nodejs
+    node_slice_ansi --> node_ansi_styles
+    node_spdx_correct --> node_spdx_expression_parse
+    node_spdx_correct --> node_spdx_license_ids
+    node_spdx_expression_parse --> node_spdx_exceptions
+    node_spdx_expression_parse --> node_spdx_license_ids
+    node_ssri --> node_yallist
+    node_ssri --> nodejs
+    node_string_decoder --> node_safe_buffer
+    node_string_width --> node_is_fullwidth_code_point
+    node_string_width --> node_slice_ansi
+    node_string_width --> node_strip_ansi
+    node_string_width --> node_wcwidth_js
+    node_strip_ansi --> node_ansi_regex
+    node_strip_ansi --> nodejs
+    node_supports_color --> node_has_flag
+    node_tar --> node_chownr
+    node_tar --> node_minipass
+    node_tar --> node_mkdirp
+    node_tar --> node_safe_buffer
+    node_tar --> node_yallist
+    node_typedarray_to_buffer --> libjs_typedarray_to_buffer
+    node_typedarray_to_buffer --> node_is_typedarray
+    node_unique_filename --> node_imurmurhash
+    node_unique_filename --> nodejs
+    node_validate_npm_package_license --> node_spdx_correct
+    node_validate_npm_package_license --> node_spdx_expression_parse
+    node_validate_npm_package_name --> node_builtins
+    node_wcwidth_js --> node_defaults
+    node_which --> node_isexe
+    node_wide_align --> node_string_width
+    node_write_file_atomic --> node_imurmurhash
+    node_write_file_atomic --> node_is_typedarray
+    node_write_file_atomic --> node_signal_exit
+    node_write_file_atomic --> node_typedarray_to_buffer
+    node_write_file_atomic --> nodejs
+    nodejs --> libc6
+    nodejs --> libnode72
+    npm --> ca_certificates
+    npm --> node_abbrev
+    npm --> node_agent_base
+    npm --> node_ansistyles
+    npm --> node_aproba
+    npm --> node_archy
+    npm --> node_asap
+    npm --> node_cacache
+    npm --> node_chalk
+    npm --> node_chownr
+    npm --> node_cli_table3
+    npm --> node_colors
+    npm --> node_columnify
+    npm --> node_debug
+    npm --> node_depd
+    npm --> node_emoji_regex
+    npm --> node_encoding
+    npm --> node_glob
+    npm --> node_got
+    npm --> node_graceful_fs
+    npm --> node_gyp
+    npm --> node_hosted_git_info
+    npm --> node_https_proxy_agent
+    npm --> node_ini
+    npm --> node_ip
+    npm --> node_ip_regex
+    npm --> node_json_parse_better_errors
+    npm --> node_jsonparse
+    npm --> node_lru_cache
+    npm --> node_minimatch
+    npm --> node_minipass
+    npm --> node_mkdirp
+    npm --> node_ms
+    npm --> node_negotiator
+    npm --> node_nopt
+    npm --> node_normalize_package_data
+    npm --> node_npm_bundled
+    npm --> node_npm_package_arg
+    npm --> node_npmlog
+    npm --> node_once
+    npm --> node_promise_retry
+    npm --> node_promzard
+    npm --> node_read
+    npm --> node_read_package_json
+    npm --> node_rimraf
+    npm --> node_semver
+    npm --> node_ssri
+    npm --> node_string_width
+    npm --> node_strip_ansi
+    npm --> node_tar
+    npm --> node_text_table
+    npm --> node_validate_npm_package_license
+    npm --> node_validate_npm_package_name
+    npm --> node_which
+    npm --> node_wrappy
+    npm --> node_write_file_atomic
+    npm --> node_yallist
+    openssl --> libc6
+    openssl --> libssl3
+    zlib1g --> libc6

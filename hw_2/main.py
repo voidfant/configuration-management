@@ -19,31 +19,40 @@ def parse_args():
                        default='jammy')
     parser.add_argument('--component', help='Repository component',
                        default='main')
+    parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    logging.basicConfig(level=logging.INFO)
+    
+    # Configure logging
+    log_level = logging.DEBUG if args.debug else logging.INFO
+    logging.basicConfig(level=log_level)
     
     # Analyze dependencies
     analyzer = DependencyAnalyzer(args.max_depth)
-    if args.repo_url or args.distribution or args.component:
+    analyzer.debug_mode = args.debug
+    analyzer.repo_manager.debug_mode = args.debug
+    
+    # Configure repository if custom parameters provided
+    if args.repo_url or args.distribution:
         analyzer.repo_manager.repository = Repository(
             name="custom",
             url=args.repo_url,
             distribution=args.distribution,
-            component=args.component
+            component="main"  # component теперь обрабатывается внутри
         )
     
     analyzer.analyze_dependencies(args.package)
     
     # Generate Mermaid diagram
     mermaid_content = analyzer.generate_mermaid()
+    
     # Visualize the graph
     visualizer = DependencyVisualizer(args.visualizer)
     visualizer.visualize(mermaid_content)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

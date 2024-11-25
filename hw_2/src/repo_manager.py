@@ -19,18 +19,27 @@ class RepositoryManager:
             component="main"
         )
         self.packages_cache: Dict[str, PackageInfo] = {}
+        self.debug_mode = False
         
     def download_packages_file(self) -> str:
         """Download and decompress Packages.gz file from repository."""
-        packages_url = f"{self.repository.url}/dists/{self.repository.distribution}/{self.repository.component}/binary-amd64/Packages.gz"
+        components = ["main", "universe"]  # Добавляем universe компонент
+        content = ""
         
-        try:
-            with urlopen(packages_url) as response:
-                with gzip.GzipFile(fileobj=response) as gz_file:
-                    return gz_file.read().decode('utf-8')
-        except URLError as e:
-            logging.error(f"Failed to download Packages file: {e}")
-            return ""
+        for component in components:
+            packages_url = f"{self.repository.url}/dists/{self.repository.distribution}/{component}/binary-amd64/Packages.gz"
+            
+            if self.debug_mode:
+                logging.info(f"Downloading from: {packages_url}")
+                
+            try:
+                with urllib.request.urlopen(packages_url) as response:
+                    with gzip.GzipFile(fileobj=response) as gz_file:
+                        content += gz_file.read().decode('utf-8')
+            except URLError as e:
+                logging.error(f"Failed to download Packages file from {component}: {e}")
+                
+        return content
 
     def parse_packages_file(self, content: str) -> Dict[str, PackageInfo]:
         """Parse Packages file content and extract package information."""
