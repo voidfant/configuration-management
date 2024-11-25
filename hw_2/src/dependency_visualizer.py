@@ -10,7 +10,6 @@ class DependencyVisualizer:
     def visualize(self, mermaid_content: str) -> None:
         """Visualize the Mermaid graph using external visualizer."""
         with open('temp.mmd', mode='w+') as f:
-        # with tempfile.NamedTemporaryFile(mode='w', suffix='.mmd', delete=False) as f:
             f.write(mermaid_content)
             temp_file = f.name
         print(mermaid_content)
@@ -18,5 +17,3 @@ class DependencyVisualizer:
             subprocess.run([self.visualizer_path, '-i', temp_file], check=True)
         except subprocess.CalledProcessError as e:
             logging.error(f"Failed to visualize graph: {e}")
-        # finally:
-            # os.unlink(temp_file)

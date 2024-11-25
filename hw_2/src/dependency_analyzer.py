@@ -75,3 +75,4 @@ class DependencyAnalyzer:
                     visited_edges.add(edge)
         
         return "\n".join(mermaid_lines)
+    
