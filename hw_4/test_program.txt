@@ -1,0 +1,42 @@
+# Тестовая программа: Унарный минус над вектором длины 5
+
+# Файл: test_program.txt
+LOAD_CONST 10 1 7
+LOAD_CONST 11 2 7
+LOAD_CONST 12 3 7
+LOAD_CONST 13 4 7
+LOAD_CONST 14 5 7
+
+# Запись vector1 в память
+WRITE_MEM 10 100 51
+WRITE_MEM 11 101 51
+WRITE_MEM 12 102 51
+WRITE_MEM 13 103 51
+WRITE_MEM 14 104 51
+
+# Применение унарного минуса к vector1 и запись в vector2
+READ_MEM 15 100 49
+UNARY_MINUS 16 15 55
+WRITE_MEM 16 200 51
+
+READ_MEM 15 101 49
+UNARY_MINUS 16 15 55
+WRITE_MEM 16 201 51
+
+READ_MEM 15 102 49
+UNARY_MINUS 16 15 55
+WRITE_MEM 16 202 51
+
+READ_MEM 15 103 49
+UNARY_MINUS 16 15 55
+WRITE_MEM 16 203 51
+
+READ_MEM 15 104 49
+UNARY_MINUS 16 15 55
+WRITE_MEM 16 204 51
+
+# Пример использования скрипта:
+# 1. Ассемблирование:
+# python uvm_assembler.py test_program.txt test_program.bin --log uvm_assembly.csv
+# 2. Интерпретация:
+# python uvm_interpreter.py test_program.bin result.csv 200 204
