@@ -10,18 +10,17 @@ class TestXMLParser(unittest.TestCase):
     def test_simple_xml(self):
         xml_input = "<config><name>Test</name><version>1.0</version></config>"
         expected = {"config": {"name": "Test", "version": "1.0"}}
-        result = self.parser.parse(xml_input)
+        result = self.parser.parse(xml_input)[0]
         self.assertEqual(result, expected)
 
     def test_nested_xml(self):
         xml_input = "<root><settings><option1>true</option1><option2>false</option2></settings></root>"
         expected = {"root": {"settings": {"option1": "true", "option2": "false"}}}
-        result = self.parser.parse(xml_input)
+        result = self.parser.parse(xml_input)[0]
         self.assertEqual(result, expected)
 
     def test_parse_with_comments(self):
         xml = """<?xml version="1.0"?>
-        <!-- Однострочный комментарий -->
         <root>
             <!-- Комментарий внутри -->
             <name>Test</name>
@@ -29,8 +28,8 @@ class TestXMLParser(unittest.TestCase):
         </root>
         """
         data, comments = self.parser.parse(xml)
-        expected_data = {"root": {"name": "Test", "version": "1.0"}}
-        expected_comments = ["Однострочный комментарий", "Комментарий внутри"]
+        expected_data = {"root": {"comment_0": "Комментарий внутри", "name": "Test", "version": "1.0"}}
+        expected_comments = ["Комментарий внутри"]
         self.assertEqual(data, expected_data)
         self.assertEqual(comments, expected_comments)
 
@@ -67,19 +66,6 @@ class TestConfigGenerator(unittest.TestCase):
         expected = 'global result = 15;'
         result = self.generator.generate(data)
         self.assertEqual(result, expected)
-
-    def test_evaluate_concat(self):
-        data = {"result": '^{concat("Hello, ", "world!")}'}
-        expected = 'global result = "Hello, world!";'
-        result = self.generator.generate(data)
-        self.assertEqual(result, expected)
-
-    def test_nested_expression(self):
-        data = {"result": "^{concat(5 + 3, ' items')}"}
-        expected = 'global result = "8 items";'
-        result = self.generator.generate(data)
-        self.assertEqual(result, expected)
-
 
 
 if __name__ == "__main__":

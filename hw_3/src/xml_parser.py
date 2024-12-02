@@ -23,7 +23,7 @@ class XMLParser:
             print(element.tag)
             if len(element) == 0:
                 return element.text.strip() if element.text else ""
-            elif len(set(child.tag for child in element)) == 1:
+            elif len(set(child.tag for child in element)) == 1 and len(tuple(child.tag for child in element)) != 1:
                 return [parse_element(child) for child in element]
             else:
                 result = {}
