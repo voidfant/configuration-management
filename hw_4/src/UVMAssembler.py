@@ -38,8 +38,8 @@ class UVMAssembler:
         raise ValueError(f"Неизвестная команда: {command}")
 
     def _parse_load_const(self, parts):
-        # LOAD_CONST B C A
-        if len(parts) != 4:
+        # LOAD_CONST B C
+        if len(parts) != 3:
             raise ValueError("Неверное количество аргументов для LOAD_CONST")
         
         b = int(parts[1])
@@ -60,8 +60,8 @@ class UVMAssembler:
         return raw_bytes
 
     def _parse_read_mem(self, parts):
-        # READ_MEM B C A
-        if len(parts) != 4:
+        # READ_MEM B C
+        if len(parts) != 3:
             raise ValueError("Неверное количество аргументов для READ_MEM")
         
         b = int(parts[1])
@@ -82,8 +82,8 @@ class UVMAssembler:
         return raw_bytes
 
     def _parse_write_mem(self, parts):
-        # WRITE_MEM B C A
-        if len(parts) != 4:
+        # WRITE_MEM B C
+        if len(parts) != 3:
             raise ValueError("Неверное количество аргументов для WRITE_MEM")
         
         b = int(parts[1])
@@ -104,8 +104,8 @@ class UVMAssembler:
         return raw_bytes
 
     def _parse_unary_minus(self, parts):
-        # UNARY_MINUS B C A
-        if len(parts) != 4:
+        # UNARY_MINUS B C
+        if len(parts) != 3:
             raise ValueError("Неверное количество аргументов для UNARY_MINUS")
         
         b = int(parts[1])
