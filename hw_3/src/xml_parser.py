@@ -18,15 +18,25 @@ class XMLParser:
 
         def parse_element(element):
             for item in element:
-                if item is Comment:
+                if item.tag is Comment:
                     comments.append(item.text.strip())
-
+            print(element.tag)
             if len(element) == 0:
                 return element.text.strip() if element.text else ""
-            elif all(child.tag == "item" for child in element):
+            elif len(set(child.tag for child in element)) == 1:
                 return [parse_element(child) for child in element]
             else:
-                return {child.tag: parse_element(child) for child in element}
+                result = {}
+                comments_count = 0
+                for child in element:
+                    element_tag = ''
+                    if child.tag is Comment:
+                        element_tag = f'comment_{comments_count}'
+                        comments_count += 1
+                    else:
+                        element_tag = child.tag
+                    result[element_tag] = parse_element(child)
+                return result
 
         data[tree.getroot().tag] = parse_element(tree.getroot())
         return data, comments
