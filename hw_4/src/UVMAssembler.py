@@ -46,7 +46,7 @@ class UVMAssembler:
         c = int(parts[2])
         a = self.COMMANDS['LOAD_CONST']
         
-        # Упаковка инструкции
+        # Упаковка инструкции (4 байта)
         instruction = (a & 0x3F) | ((b & 0x1F) << 6) | ((c & 0x1FFF) << 11)
         raw_bytes = struct.pack('<I', instruction)
         
@@ -68,9 +68,9 @@ class UVMAssembler:
         c = int(parts[2])
         a = self.COMMANDS['READ_MEM']
         
-        # Упаковка инструкции
+        # Упаковка инструкции (4 байта с дополнением)
         instruction = (a & 0x3F) | ((b & 0x1F) << 6) | ((c & 0x1F) << 11)
-        raw_bytes = struct.pack('<I', instruction)[:3]  # 3 байта
+        raw_bytes = struct.pack('<I', instruction)
         
         log_entry = {
             'operation': 'READ_MEM',
@@ -90,7 +90,7 @@ class UVMAssembler:
         c = int(parts[2])
         a = self.COMMANDS['WRITE_MEM']
         
-        # Упаковка инструкции
+        # Упаковка инструкции (4 байта)
         instruction = (a & 0x3F) | ((b & 0x1F) << 6) | ((c & 0x1FFF) << 11)
         raw_bytes = struct.pack('<I', instruction)
         
@@ -112,9 +112,9 @@ class UVMAssembler:
         c = int(parts[2])
         a = self.COMMANDS['UNARY_MINUS']
         
-        # Упаковка инструкции
+        # Упаковка инструкции (4 байта с дополнением)
         instruction = (a & 0x3F) | ((b & 0x1F) << 6) | ((c & 0x1F) << 11)
-        raw_bytes = struct.pack('<I', instruction)[:3]  # 3 байта
+        raw_bytes = struct.pack('<I', instruction)
         
         log_entry = {
             'operation': 'UNARY_MINUS',
@@ -143,3 +143,4 @@ class UVMAssembler:
             writer = csv.DictWriter(f, fieldnames=['operation', 'A', 'B', 'C', 'raw_bytes'])
             writer.writeheader()
             writer.writerows(self.log_entries)
+
