@@ -1,4 +1,6 @@
 from xml.etree.ElementTree import ElementTree, fromstring, Comment
+from xml.etree.ElementTree import XMLParser as XML
+from src.commented_tb import CommentedTreeBuilder
 
 class XMLParser:
     """
@@ -9,7 +11,8 @@ class XMLParser:
         Преобразует XML-данные в словарь и собирает комментарии.
         """
 
-        tree = ElementTree(fromstring(xml_data))
+        parser = XML(target=CommentedTreeBuilder())
+        tree = ElementTree(fromstring(text=xml_data, parser=parser))
         data = {}
         comments = []
 
